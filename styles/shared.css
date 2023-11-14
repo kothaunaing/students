@@ -1,0 +1,306 @@
+@font-face {
+  font-family: 'Padauk Bold';
+  src: url(../fonts/Padauk-Bold.ttf);
+}
+
+body {
+  padding-top: 52px;
+  margin: 0;
+  background-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  font-size: 1em;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(177, 100%, 24%);
+  padding: 0 10px;
+  column-gap: 10px;
+  border-bottom: 1px solid rgb(119, 119, 119);
+  z-index: 100;
+}
+
+.left-section {
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid rgba(128, 128, 128, 0);
+  padding: 10px 8px;
+  border-radius: 25px;
+  transition: border 0.15s;
+}
+
+.left-section:hover {
+  border: 1px solid rgb(77, 77, 77);
+}
+
+.middle-section {
+  display: flex;
+  max-width: 700px;
+  flex: 1;
+  column-gap: 5px;
+  align-items: center;
+  position: relative;
+}
+
+.search-by {
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-bar {
+  padding: 0 10px;
+  height: 37px;
+  flex: 1;
+  width: 50px;
+  border: 1.5px solid rgb(124, 124, 124);
+  border-radius: 5px;
+  outline-color: black;
+}
+
+.search-btn {
+  padding: 0 10px;
+  border: 1px solid rgba(228, 228, 228, 0);
+  border-radius: 5px;
+  color: black;
+  font-weight: 600;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: opacity 0.15s, border 0.15s;
+}
+
+.search-icon {
+  height: 30px;
+}
+
+.search-btn:hover,
+.search-by:hover {
+  opacity: 0.75;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.account-pic {
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(48, 48, 48, 0);
+  transition: border 0.15s;
+}
+
+.account-pic:hover {
+  border: 1px solid rgb(48, 48, 48);
+}
+
+.autofill-container {
+  display: flex;
+  justify-content: center;
+  z-index: 200;
+  position: absolute;
+  top: 43px;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.autofill-active {
+  display: flex;
+}
+
+
+.name-container {
+  background-color: rgb(245, 245, 245);
+  flex: 1;
+  display: grid;
+  justify-content: center;
+  padding: 5px;
+  max-width: 600px;
+  border: 1px solid rgb(185, 185, 185);
+  border-top: none;
+  row-gap: 2px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.name-container-height {
+  height: 200px;
+  overflow: auto;
+}
+
+
+.name {
+  padding: 0px 50px;
+  border: 1px solid rgba(165, 165, 165, 0);
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: system-ui, 'Padauk Bold';
+  font-weight: 600;
+  height: auto;
+}
+
+.name:hover {
+  border: 1px solid rgb(214, 214, 214);
+}
+
+.app-display {
+  margin: 0 5px;
+  height: 100vh;
+  width: auto;
+}
+
+.total {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  border: 1px solid rgb(189, 189, 189);
+  margin-top: 5px;
+  background-color: rgb(125, 255, 194);
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container {
+  margin-top: 5px;
+  display: grid;
+  column-gap: 2px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  background-color: rgb(243, 243, 243);
+  border: 1.5px solid rgb(211, 211, 211);
+  border-radius: 15px;
+}
+
+.grade {
+  font-weight: 600;
+  background-color: hsl(138, 100%, 82%);
+  padding: 15px;
+  padding-left: 20px;
+  cursor: pointer;
+  border: 1px solid rgba(128, 128, 128, 0);
+}
+
+.grade:hover {
+  opacity: 0.7;
+  border: 1px solid rgb(128, 128, 128);
+}
+
+.display-students {
+  display: grid;
+  row-gap: 2px;
+  column-gap: 2px;
+  padding: 10px;
+}
+
+@media (min-width: 550px) and (max-width: 800px) {
+  .display-students {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 801px) {
+  .display-students {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-bottom: 5px;
+  background-color: hsl(0, 0%, 94%);
+  height: 40px;
+  margin-left: -5px;
+  margin-right: -5px;
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+
+.grade-text,
+.total-student {
+  font-weight: 600;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.grade-back-btn {
+  display: flex;
+  padding: 6px 15px 6px 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: opacity 0.15s, border 0.15s, box-shadow 0.15s, background-color 0.15s;
+}
+
+.grade-back-btn:hover {
+  opacity: 0.75;
+  background-color: rgb(0, 216, 90);
+}
+
+.student {
+  border: 1px solid rgba(190, 190, 190, 0.589);
+  border-radius: 0px;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  column-gap: 5px;
+  padding: 3px;
+  align-items: stretch;
+  background-color: hsl(151, 100%, 91%);
+  transition: opacity 0.15s, border 0.15s;
+}
+
+.number {
+  margin-left: 5px;
+  font-weight: 600;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 255, 115);
+  margin: -3px 0 -3px -3px;
+}
+
+.student:hover {
+  opacity: 0.75;
+  border: 1px solid rgb(71, 71, 71);
+}
+
+.student-pic {
+  height: 70px;
+  border-radius: 35px;
+}
+
+.student-info {
+  display: grid;
+  row-gap: 2px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.not-found-message {
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.back-icon {
+  height: 31px;
+}

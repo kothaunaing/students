@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEA (Students Info)</title>
+  <link rel="stylesheet" href="styles/shared.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="left-section">
+      SEA
+    </div>
+    <div class="middle-section">
+      <select class="search-by">
+        <option selected>By name</option>
+        <option>By grade</option>
+        <option>By age</option>
+        <option>By keyword</option>
+      </select>
+      <input type="search" class="search-bar" placeholder="Search students">
+      <button class="search-btn">
+        <img class="search-icon" src="images/icons8_search_144px_1.png">
+      </button>
+
+      <div class="autofill-container">
+        <div class="name-container">
+          <p>No Suggestions !</p>
+        </div>
+      </div>
+      
+    </div>
+    <div class="right-section">
+      <img class="account-pic" src="images/user-profile-image.jpg">
+    </div>
+  </header>
+
+  <main class="app-display">
+  </main>
+
+  <script src="scripts/students.js"></script>
+  <script src="scripts/home.js"></script>
+  <script src="scripts/grades.js"></script>
+  <script src="scripts/search.js"></script>
+  <script src="scripts/search-autofill.js"></script>
+</body>
+
+</html>
