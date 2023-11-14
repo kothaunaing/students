@@ -33,7 +33,7 @@ searchBarElement.addEventListener('keydown', (e) => {
 
 function showAutofill() {
   const searchBy = searchBySelectElement.value;
-  const value = searchBarElement.value ? searchBarElement.value.toLowerCase() : 0;
+  const value = searchBarElement.value;
 
 
   let autofillArray = [];
@@ -44,6 +44,8 @@ function showAutofill() {
       const keywords = student.keyword;
       keywords.forEach((keyword) => {
         let matchingName = false;
+
+
         if (keyword.toLowerCase().includes(value)) {
           if (autofillArray.length < 30) {
 
@@ -53,10 +55,11 @@ function showAutofill() {
               }
             });
           }
-          if (!matchingName) {
-            autofillArray.push(keyword);
+          if (keyword) {
+            if (!matchingName) {
+              autofillArray.push(keyword);
+            }
           }
-
         }
       })
     });
@@ -67,29 +70,34 @@ function showAutofill() {
     allStudents.filter((student) => {
       const name = student.name;
       let matchingName = false;
-      if (name.toLowerCase().includes(value)) {
-        if (autofillArray.length < 30) {
-          autofillArray.forEach((names) => {
-            if (names === name) {
-              matchingName = true;
+      if (value) {
+        if (name.toLowerCase().includes(value)) {
+          if (autofillArray.length < 30) {
+            autofillArray.forEach((names) => {
+              if (names === name) {
+                matchingName = true;
+              }
+            });
+            if (!matchingName) {
+              autofillArray.push(name);
             }
-          });
-          if (!matchingName){
-            autofillArray.push(name);
           }
         }
+      }  else {
+        autofillArray.push(name);
       }
+
     });
   }
-  else if (searchBy === 'By grade'){
+  else if (searchBy === 'By grade') {
     autofillArray = [
-      'KG', 'Grade 1', 'Grade 2', 'Grade 3', 'Grade 4','Grade 5', 'Grade 6',
+      'KG', 'Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6',
       'Grade 7', 'Grade 8', 'Grade 9'
     ];
   }
-  else if (searchBy === 'By age'){
+  else if (searchBy === 'By age') {
     autofillArray = [
-      '4', '5', '6', '7', '8','9', '10',
+      '4', '5', '6', '7', '8', '9', '10',
       '11', '12', '13', '14', '15', '16'
     ];
   }

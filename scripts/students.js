@@ -5,7 +5,6 @@ const KG = [
     grade: 'KG',
     image: 'logo square.jpg',
     keyword: [
-      'Hnin Lae Thu',
       'နှင်းလဲ့သူ',
       'ပိုက်ဆံပျောက်'
     ]
@@ -16,7 +15,6 @@ const KG = [
     grade: 'KG',
     image: 'logo square.jpg',
     keyword: [
-      'Hnin Pwint Phyu',
       'နှင်းပွင့်ဖြူ',
       ''
     ]
@@ -27,7 +25,6 @@ const KG = [
     grade: 'KG',
     image: 'logo square.jpg',
     keyword: [
-      'Htet Shine',
       'ထက်ရှိုင်း'
     ]
   },
@@ -37,7 +34,6 @@ const KG = [
     grade: 'KG',
     image: 'logo square.jpg',
     keyword: [
-      'Aye July Phyo',
       'အေးဂျူလှိုင်ဖြိုး',
       ''
     ]
@@ -261,7 +257,6 @@ const grade2 = [
     image: 'logo square.jpg',
     keyword: [
       'ယွန်းဝတ်ရည်နိုင်',
-      'Shwe Poe Eain',
       'ရွှေပိုးအိမ်'
     ]
   },
@@ -660,7 +655,6 @@ const grade5 = [
     image: 'logo square.jpg',
     keyword: [
       'ဉာဏ်ဝင်း',
-      'အချိန်တန်ရင်အိမ်ပြန်ရမယ်',
       ''
     ]
   }
@@ -765,8 +759,6 @@ const grade7 = [
     image: 'logo square.jpg',
     keyword: [
       'ခန့်မင်းပိုင်',
-      'အရက်',
-      'ဆေးလိပ်'
     ]
   },
   {
