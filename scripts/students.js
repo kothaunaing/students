@@ -1,6 +1,6 @@
 const KG = [
   {
-    name: 'Hnin Lae Thu',
+    name: 'Hnin Lat Thu',
     age: 5,
     grade: 'KG',
     image: 'logo square.jpg',
@@ -902,13 +902,7 @@ const grade9 = [
     grade: 'Grade 9',
     image: 'logo square.jpg',
     keyword: [
-      'နိုင်ထူးလွင်',
-      '',
-      '',
-      '',
-      '',
-      '',
-      ''
+      'နိုင်ထူးလွင်'
     ]
   },
   {
@@ -918,13 +912,6 @@ const grade9 = [
     image: 'logo square.jpg',
     keyword: [
       'မိုးယံ',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
       ''
     ]
   }
