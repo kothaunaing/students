@@ -4,7 +4,7 @@
 }
 
 body {
-  padding-top: 52px;
+  padding-top: 72px;
   margin: 0;
   background-color: white;
 }
@@ -22,7 +22,7 @@ body {
   right: 0;
   left: 0;
   display: flex;
-  height: 50px;
+  height: 70px;
   align-items: center;
   justify-content: space-between;
   background-color: hsl(189, 87%, 37%);
@@ -56,7 +56,7 @@ body {
 }
 
 .search-by {
-  height: 35px;
+  height: 40px;
   border: none;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0);
@@ -67,7 +67,7 @@ body {
 
 .search-bar {
   padding: 0 10px;
-  height: 37px;
+  height: 43px;
   flex: 1;
   width: 50px;
   border: 1.5px solid rgb(124, 124, 124);
@@ -76,7 +76,7 @@ body {
 }
 
 .search-btn {
-  padding: 0 10px;
+  padding: 2px 10px;
   border: 1px solid rgba(228, 228, 228, 0);
   border-radius: 5px;
   color: black;
@@ -149,6 +149,7 @@ body {
   font-family: system-ui, 'Padauk Bold';
   font-weight: 600;
   height: auto;
+  font-size: 1em;
 }
 
 .name:hover {
