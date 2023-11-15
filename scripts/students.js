@@ -5,8 +5,7 @@ const KG = [
     grade: 'KG',
     image: 'logo square.jpg',
     keyword: [
-      'နှင်းလဲ့သူ',
-      'ပိုက်ဆံပျောက်'
+      'နှင်းလတ်သူ'
     ]
   },
   {

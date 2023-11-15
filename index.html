@@ -15,23 +15,29 @@
       SEA
     </div>
     <div class="middle-section">
-      <select class="search-by">
-        <option selected>By name</option>
-        <option>By grade</option>
-        <option>By age</option>
-        <option>By keyword</option>
-      </select>
-      <input type="search" class="search-bar" placeholder="Search students">
-      <button class="search-btn">
-        <img class="search-icon" src="images/icons8_search_144px_1.png">
-      </button>
+      <div class="search-by-container">
+        <select class="search-by">
+          <option class="by-name" selected>By name</option>
+          <option class="by-grade">By grade</option>
+          <option class="by-age">By age</option>
+          <option class="by-keyword">By keyword</option>
+        </select>
+        <div class="tooltip">Search by</div>
+      </div>
+      <input type="search" class="search-bar" placeholder="Search">
+      <div class="search-btn-container">
+        <button class="search-btn">
+          <img class="search-icon" src="images/icons8_search_144px_1.png">
+        </button>
+        <div class="tooltip">Search students</div>
+      </div>
 
       <div class="autofill-container">
         <div class="name-container">
           <p>No Suggestions !</p>
         </div>
       </div>
-      
+
     </div>
     <div class="right-section">
       <img class="account-pic" src="images/user-profile-image.jpg">

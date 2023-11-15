@@ -25,7 +25,7 @@ body {
   height: 65px;
   align-items: center;
   justify-content: space-between;
-  background-color: hsla(207, 100%, 56%, 0.274);
+  background-color: hsla(187, 100%, 54%, 0.507);
   padding: 0 10px;
   column-gap: 10px;
   border-bottom: 1px solid rgb(179, 179, 179);
@@ -39,12 +39,11 @@ body {
   cursor: pointer;
   border: 1px solid rgba(128, 128, 128, 0);
   padding: 10px 8px;
-  border-radius: 25px;
   transition: border 0.15s;
 }
 
 .left-section:hover {
-  border: 1px solid rgb(77, 77, 77);
+  border: 1px solid rgb(104, 104, 104);
 }
 
 .middle-section {
@@ -54,6 +53,34 @@ body {
   column-gap: 5px;
   align-items: center;
   position: relative;
+}
+
+.search-btn-container,
+.search-by-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  white-space: nowrap;
+  bottom: -40px;
+  padding: 6px;
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(87, 87, 87);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  z-index: 300;
+}
+
+.search-btn-container:hover .tooltip,
+.search-by-container:hover .tooltip {
+  opacity: 1;
 }
 
 .search-by {
@@ -81,7 +108,7 @@ body {
 }
 
 .search-btn {
-  padding: 2px 10px;
+  padding: 3px 10px;
   border: 1px solid rgba(228, 228, 228, 0);
   border-radius: 5px;
   color: black;
@@ -130,6 +157,7 @@ body {
 }
 
 .name-container {
+  background-color: rgb(245, 245, 245);
   flex: 1;
   display: grid;
   justify-content: center;
@@ -140,8 +168,6 @@ body {
   row-gap: 2px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-color: hsla(204, 100%, 83%, 0.616);
-  backdrop-filter: blur(8px);
 }
 
 .name-container-height {
@@ -175,15 +201,17 @@ body {
   margin-right: auto;
   max-width: 500px;
   margin-top: 5px;
-  background-color: rgb(125, 255, 194);
-  padding: 10px;
+  background-color: rgb(225, 255, 242);
+  padding: 20px 10px;
   font-weight: 600;
   text-align: center;
+  border-radius: 10px;
+  margin-bottom: -20px;
+  border: 5px solid white;
 }
 
 .container {
   margin: 5px;
-  margin-top: 5px;
   display: grid;
   column-gap: 2px;
   padding: 15px;
@@ -197,7 +225,7 @@ body {
 
 .grade {
   font-weight: 600;
-  background-color: hsl(138, 100%, 82%);
+  background-color: hsl(175, 100%, 88%);
   padding: 15px;
   padding-left: 20px;
   cursor: pointer;
@@ -212,7 +240,7 @@ body {
 .display-students {
   display: grid;
   row-gap: 2px;
-  column-gap: 2px;
+  column-gap: 20px;
   padding: 20px;
   border: 1.5px solid rgb(218, 218, 218);
   border-radius: 5px;
@@ -238,7 +266,7 @@ body {
   column-gap: 5px;
   margin-bottom: 5px;
   background-color: hsl(0, 0%, 94%);
-  height: 40px;
+  height: 50px;
   margin-left: -5px;
   margin-right: -5px;
   border-bottom: 1px solid rgb(197, 197, 197);
@@ -253,9 +281,11 @@ body {
 
 .grade-back-btn {
   display: flex;
-  padding: 6px 15px 6px 20px;
+  margin-left: 20px;
+  padding: 5px 10px;
+  border: 1px solid rgba(196, 196, 196, 0);
+  align-items: center;
   font-weight: 600;
-  border: none;
   cursor: pointer;
   background-color: transparent;
   transition: opacity 0.15s, border 0.15s, box-shadow 0.15s, background-color 0.15s;
@@ -263,7 +293,7 @@ body {
 
 .grade-back-btn:hover {
   opacity: 0.75;
-  background-color: rgb(0, 216, 90);
+  border: 1px solid rgb(196, 196, 196);
 }
 
 .student {
@@ -286,7 +316,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 255, 115);
+  background-color: rgb(0, 195, 255);
   margin: -3px 0 -3px -3px;
 }
 
@@ -315,4 +345,48 @@ body {
 
 .back-icon {
   height: 31px;
+}
+
+@media (max-width: 450px){
+  .header {
+    column-gap: 5px;
+    padding: 0 3px;
+  }
+  
+  .left-section {
+    padding: 10px 0px;
+  }
+
+  .middle-section {
+    column-gap: 2px;
+  }
+  
+  .search-by {
+    height: 43px;
+  }
+  
+  .search-btn {
+    padding: 3px 10px;
+  }
+  
+  .search-icon {
+    height: 30px;
+  }
+  
+  .search-btn:hover,
+  .search-by:hover {
+    opacity: 0.75;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+  .account-pic {
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(48, 48, 48, 0);
+    transition: border 0.15s;
+  }
+  
+  .account-pic:hover {
+    border: 1px solid rgb(48, 48, 48);
+  }
 }
