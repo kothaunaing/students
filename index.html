@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEA (Students Info)</title>
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/search.css">
+  <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/shared.css">
 </head>
 
@@ -17,24 +20,26 @@
     <div class="middle-section">
       <div class="search-by-container">
         <select class="search-by">
-          <option class="by-name" selected>By name</option>
-          <option class="by-grade">By grade</option>
-          <option class="by-age">By age</option>
-          <option class="by-keyword">By keyword</option>
+          <option class="by-name" value="By name" selected>By name (en)</option>
+          <option class="by-keyword" value="By name 2">By name (my)</option>
+          <option class="by-grade" value="By grade">By grade</option>
+          <option class="by-age" value="By age">By age</option>
         </select>
         <div class="tooltip">Search by</div>
       </div>
       <input type="search" class="search-bar" placeholder="Search">
       <div class="search-btn-container">
-        <button class="search-btn">
-          <img class="search-icon" src="images/icons8_search_144px_1.png">
-        </button>
+        <a href="search.html">
+          <button class="search-btn">
+            <img class="search-icon" src="images/icons8_search_144px_1.png">
+          </button>
+        </a>
         <div class="tooltip">Search students</div>
       </div>
 
       <div class="autofill-container">
         <div class="name-container">
-          <p>No Suggestions !</p>
+          <div class="no-suggestion">No suggestions !</div>
         </div>
       </div>
 
@@ -47,11 +52,7 @@
   <main class="app-display">
   </main>
 
-  <script src="scripts/students.js"></script>
-  <script src="scripts/home.js"></script>
-  <script src="scripts/grades.js"></script>
-  <script src="scripts/search.js"></script>
-  <script src="scripts/search-autofill.js"></script>
+  <script type="module" src="scripts/index.js"></script>
 </body>
 
 </html>

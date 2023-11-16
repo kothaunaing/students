@@ -907,3 +907,43 @@ const grade9 = [
     ]
   }
 ]
+
+export const allStudents = KG.concat(grade1, grade2, grade3, grade4,
+  grade5, grade6, grade7, grade8, grade9);
+
+export let currentStudents = JSON.parse(localStorage.getItem('current-students')) || [];
+
+export function calCurrentStudent(grade) {
+  if (grade === 'KG') {
+    currentStudents = KG;
+  }
+  else if (grade === 'Grade 1') {
+    currentStudents = grade1;
+  }
+  else if (grade === 'Grade 2') {
+    currentStudents = grade2;
+  }
+  else if (grade === 'Grade 3') {
+    currentStudents = grade3;
+  } else if (grade === 'Grade 4') {
+    currentStudents = grade4;
+  }
+  else if (grade === 'Grade 5') {
+    currentStudents = grade5;
+  } else if (grade === 'Grade 6') {
+    currentStudents = grade6;
+  }
+  else if (grade === 'Grade 7') {
+    currentStudents = grade7;
+  }
+  else if (grade === 'Grade 8') {
+    currentStudents = grade8;
+  }
+  else if (grade === 'Grade 9'){
+    currentStudents = grade9;
+  }
+}
+
+export function saveToStorage(){
+  localStorage.setItem('current-students', JSON.stringify(currentStudents));
+}

@@ -1,12 +1,16 @@
-import { foundStudents } from './search and autocomplete.js';
+import { currentStudents } from '../scripts/students.js';
 
-displayFoundStudents();
+displayStudents();
 
-function displayFoundStudents() {
+function displayStudents() {
   const appDisplayElement = document.querySelector('.app-display');
   let studentsHTML = '';
+  const grade = currentStudents[0].grade;
 
-  foundStudents.forEach((student, index) => {
+  currentStudents.sort((a, b) => {
+    return a.name.localeCompare(b.name);
+  });
+  currentStudents.forEach((student, index) => {
     const { name, age, image, grade } = student;
 
     studentsHTML += `
@@ -16,15 +20,14 @@ function displayFoundStudents() {
         <img src="images/${image}" class="student-pic">
       </div>
       <div class="student-info">
-        <div>${name}</div>
+       <div>${name}</div>
         <div>${age} years old</div>
-        <div>${grade}</div>
       </div>
     </div>
     `;
   });
-  
-  document.title = `Found ${foundStudents.length} students`;
+
+  document.title = grade;
   appDisplayElement.innerHTML = `
   <div class="nav-bar">
   <a href="index.html">
@@ -32,8 +35,8 @@ function displayFoundStudents() {
       <img class="back-icon" src="images/back-icon.png">
     </button>
   </a>
-    <div class="grade-text"></div>
-    <div class="total-student">Found ${foundStudents.length} students</div>
+    <div class="grade-text">${grade}</div>
+    <div class="total-student">Total - ${currentStudents.length} students</div>
   </div>
   <div class="display-students">
     ${studentsHTML}
